@@ -8,15 +8,13 @@ class PointDemo {
         point1.setValues(2, 3, 4);
         System.out.println(point1.getValues());
 
-        if (point.getValues().equals(point1.getValues())) {
+        if (point.equals(point1)) {
             System.out.println("Matched");
-        }
-        else{
-            System.out.println("Not Matched");
+        } else {
+            System.out.println("NotMatched");
         }
     }
 
-    
 }
 
 class Point {
@@ -30,9 +28,11 @@ class Point {
         zCordinate = z;
     }
 
+    boolean equals(Point p) {
+        return p.xCordinate == this.xCordinate && p.yCordinate == this.yCordinate && p.zCordinate == this.zCordinate;
+    }
+
     String getValues() {
         return xCordinate + "," + yCordinate + "," + zCordinate;
     }
 }
-
-    
