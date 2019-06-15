@@ -28,7 +28,14 @@ class Point {
         zCordinate = z;
     }
 
-    boolean equals(Point p) {
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (!(o instanceof Point)) {
+            return false;
+        }
+        Point p = (Point) o;
         return p.xCordinate == this.xCordinate && p.yCordinate == this.yCordinate && p.zCordinate == this.zCordinate;
     }
 
