@@ -32,6 +32,6 @@ class Numbers {
                 System.out.println(num);
             }
         }
-
     }
+
 }
