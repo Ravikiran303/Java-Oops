@@ -3,7 +3,7 @@ class NumbersDemo {
         Numbers numbers = new Numbers();
         numbers.PrintNumbers();
         System.out.println("Sum of hundred numbers:" + numbers.sumOfHundredNumbers());
-        
+        numbers.divisibleByThreeAndFive();
     }
 }
 
@@ -25,6 +25,13 @@ class Numbers {
         return sum;
     }
 
-   
+    void divisibleByThreeAndFive() {
+        System.out.println("Divisible by 5 and 3 numbers:");
+        for (num = 1; num <= 100; num++) {
+            if (num % 3 == 0 && num % 5 == 0) {
+                System.out.println(num);
+            }
+        }
+
     }
 }
